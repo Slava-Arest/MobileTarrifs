@@ -1,9 +1,9 @@
-package logic;
+package epam.jwd.mobileTariffs.logic;
 
-import mobileTarrifs.Tariff;
-import mobileTarrifs.ForeignBusiness;
-import mobileTarrifs.ForeignBusinessPlus;
-import mobileTarrifs.Success;
+import epam.jwd.mobileTariffs.mobileTarrifs.Tariff;
+import epam.jwd.mobileTariffs.mobileTarrifs.ForeignBusiness;
+import epam.jwd.mobileTariffs.mobileTarrifs.ForeignBusinessPlus;
+import epam.jwd.mobileTariffs.mobileTarrifs.Success;
 
 /**
  * Logical class for counting subscribers of all tariffs
@@ -11,7 +11,7 @@ import mobileTarrifs.Success;
  * @version - 1.0
  */
 
-public class CountOfSubscribers {
+public class SubscribersCounter {
 
     Tariff success = new Success();
     Tariff foreignBusiness = new ForeignBusiness();

@@ -1,4 +1,4 @@
-package mobileTarrifs;
+package epam.jwd.mobileTariffs.mobileTarrifs;
 
 
 import java.util.Objects;

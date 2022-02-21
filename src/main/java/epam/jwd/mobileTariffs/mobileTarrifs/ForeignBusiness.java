@@ -1,23 +1,24 @@
-package mobileTarrifs;
+package epam.jwd.mobileTariffs.mobileTarrifs;
 
 import java.util.Objects;
 
-public class Success extends Tariff {
-
-    public Success(Double cost, Integer numberOfSubscribers) {
+public class ForeignBusiness extends Tariff {
+    public ForeignBusiness(Double cost, Integer numberOfSubscribers) {
         super(cost, numberOfSubscribers);
     }
 
     private Integer freeMinutes;
     private Integer internetTraffic;
+    private Integer roamingMinutes;
 
-    public Success(Double cost, Integer numberOfSubscribers, Integer freeMinutes, Integer internetTraffic) {
+    public ForeignBusiness(Double cost, Integer numberOfSubscribers, Integer freeMinutes, Integer internetTraffic, Integer roamingMinutes) {
         super(cost, numberOfSubscribers);
         this.freeMinutes = freeMinutes;
         this.internetTraffic = internetTraffic;
+        this.roamingMinutes = roamingMinutes;
     }
 
-    public Success() {
+    public ForeignBusiness() {
 
     }
 
@@ -37,11 +38,20 @@ public class Success extends Tariff {
         this.internetTraffic = internetTraffic;
     }
 
+    public Integer getRoamingMinutes() {
+        return roamingMinutes;
+    }
+
+    public void setRoamingMinutes(Integer roamingMinutes) {
+        this.roamingMinutes = roamingMinutes;
+    }
+
     @Override
     public String toString() {
-        return "Success{" +
+        return "ForeignBusiness{" +
                 "freeMinutes=" + freeMinutes +
                 ", internetTraffic=" + internetTraffic +
+                ", roamingMinutes=" + roamingMinutes +
                 '}';
     }
 
@@ -50,12 +60,12 @@ public class Success extends Tariff {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Success success = (Success) o;
-        return Objects.equals(freeMinutes, success.freeMinutes) && Objects.equals(internetTraffic, success.internetTraffic);
+        ForeignBusiness that = (ForeignBusiness) o;
+        return Objects.equals(freeMinutes, that.freeMinutes) && Objects.equals(internetTraffic, that.internetTraffic) && Objects.equals(roamingMinutes, that.roamingMinutes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), freeMinutes, internetTraffic);
+        return Objects.hash(super.hashCode(), freeMinutes, internetTraffic, roamingMinutes);
     }
 }
