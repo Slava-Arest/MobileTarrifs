@@ -1,8 +1,7 @@
-package logic;
+package epam.jwd.mobileTariffs.logic;
 
-import mobileTarrifs.Tariff;
-
-import static repository.TariffRepo.TARIFF_LIST;
+import epam.jwd.mobileTariffs.mobileTarrifs.Tariff;
+import static epam.jwd.mobileTariffs.repository.TariffRepository.TARIFF_LIST;
 
 /**
  * Here we search tariff by parameters according to the technical assignment. I chose a cost parameter for searching.
@@ -11,7 +10,7 @@ import static repository.TariffRepo.TARIFF_LIST;
  * @version - 1.0
  */
 
-public class TariffSearch {
+public class TariffSearcher {
 
     public Tariff searchByCost(){
         for (Tariff searching:TARIFF_LIST) {
